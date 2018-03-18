@@ -1,0 +1,4 @@
+.dragging {
+  border: solid 1px red;
+  opacity: .50;
+}

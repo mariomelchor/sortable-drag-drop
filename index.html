@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+  .dragging {
+    border: solid 1px red;
+    opacity: .50;
+  }
+  </style>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+
+    <div class="drag-item col s12 m8 offset-m2 l6 offset-l3" draggable="true" >
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://via.placeholder.com/150x150" class="circle responsive-img">
+          </div>
+          <div class="col s10">
+            <span class="black-text">
+              1
+            </span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.col -->
+
+
+    <div class="drag-item col s12 m8 offset-m2 l6 offset-l3" draggable="true" >
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://via.placeholder.com/150x150" class="circle responsive-img">
+          </div>
+          <div class="col s10">
+            <span class="black-text">
+              2
+            </span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.col -->
+
+    <div class="drag-item col s12 m8 offset-m2 l6 offset-l3" draggable="true" >
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://via.placeholder.com/150x150" class="circle responsive-img">
+          </div>
+          <div class="col s10">
+            <span class="black-text">
+              3
+            </span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.col -->
+    
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

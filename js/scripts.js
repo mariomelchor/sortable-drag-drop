@@ -1,11 +1,12 @@
 const row = document.querySelector('.row');
 var dragElement;
 
+//dragstart
 row.addEventListener('dragstart', function(e) {
+  var target = e.target;
 
-  let target = event.target;
-
-  if ( target && target.nodeName === 'DIV' ) {
+  // Set Current dragElement
+  if ( target && target.classList.contains('drag-item')  ) {
 
     dragElement = target;
     dragElement.classList.add('dragging')
@@ -14,16 +15,13 @@ row.addEventListener('dragstart', function(e) {
     e.dataTransfer.setData('text', dragElement.target);
 
   }
-
-  // console.log('dragstart', e);
 })
 
 //dragend
-// row.addEventListener('dragend', function(e) {
-//   // console.log(e)
-
-//   this.classList.remove('dragging')
-// })
+row.addEventListener('dragend', function(e) {
+  e.preventDefault();
+  dragElement.classList.remove('dragging')
+})
 
 //dragover
 row.addEventListener('dragover', function(e) {
@@ -31,10 +29,8 @@ row.addEventListener('dragover', function(e) {
   e.dataTransfer.dropEffect = 'move';
   
   var target = e.target;
-  // console.log('dragover', target)
 
-  if( target && target !== dragElement && target.nodeName === 'DIV' ){
-      // Сортируем
-      row.insertBefore(dragElement, target.nextSibling || target);
+  if( target && target !== dragElement && target.classList.contains('drag-item') ){
+    row.insertBefore(dragElement, target.nextSibling || target);
   }
 })

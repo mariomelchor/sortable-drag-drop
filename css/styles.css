@@ -1,4 +1,15 @@
-.dragging {
-  border: solid 1px red;
+body {
+  background-color: #e6e6e6;
+  padding-top: 50px;
+}
+
+.drag-item.dragging {
+  border: dotted 1px #999;
   opacity: .50;
+}
+.card-panel {
+  padding: 10px;
+}
+.card-panel .row {
+  margin-bottom: 0;
 }
